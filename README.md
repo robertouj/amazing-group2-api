@@ -22,8 +22,6 @@
 10. 💪 Opened PR [#11](https://github.com/mockodev/headlesscms/pull/11) in [mockodev/headlesscms](https://github.com/mockodev/headlesscms)
 <!--END_SECTION:activity-->
 
+# CURL commands
 
-
-
-
-
+curl -d '{"id": "XXXXXxxxXXXXxXXXXXxx", "name": "Kakerlake Tantaluka", "latinName": "Kakerlis Tantalus"}' -H "Content-Type: application/json" -X POST http://localhost:5000/animals

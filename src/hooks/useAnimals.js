@@ -11,6 +11,9 @@ const getAnimal = (animal) => ({
     url: thumb.fields.file.url,
     title: thumb.fields.title,
   })),
+  idVideo: animal.fields.video.fields.file.fileName
+    .replace("watch?v=", "")
+    .replace("&feature=youtu.be", ""),
   //crop: animal.fields?.fields.file.url + "?w=300&h=200&fit=crop",
   img: animal.fields.image?.fields.file.url + "?w=400&h=300&fit=fill",
 });
@@ -25,18 +28,41 @@ function useAnimals() {
   //fetch can have a lot of data, we need client.getEntries otherwise website won´t be shown
   //with client.getEntries we can have loading state
   useEffect(() => {
-    client.getEntries()
-    //if the server replies
-    //response is a variable, depends on map function
+    client
+      .getEntries()
+      //if the server replies
+      //response is a variable, depends on map function
       .then((response) => {
         console.log(response);
         const newAnimals = response.items.map((item) => getAnimal(item));
+        //console.log(JSON.stringify(newAnimals));
         setAnimals(newAnimals); //-> actions after answer, asynchronous callback
       })
       .catch((error) => console.log("Request failed: " + error));
     //.catch -> in order to control error -> browser will display "Request failed" if promise is not fulfilled, but rejected
-  }, []);
+/*
+    const payload = {
+      id: "ölkjölkjölkjölkj",
+      name: "Kakerlake3 Tantaluka3",
+      latinName: "Kakerlis3 Tantalus3"
+    };
 
+    const optionsPOST = {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify( payload )
+    };
+
+    fetch(`http://localhost:5000/animals`, optionsPOST)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch(() => console.log("Request failed"));
+  }, []);
+*/
   return animals;
 }
 
