@@ -24,6 +24,7 @@ function useAnimals() {
   //useEffect = actions are exectued after the DOM is loaded (at the end)
   //fetch can have a lot of data, we need client.getEntries otherwise website won´t be shown
   //with client.getEntries we can have loading state
+/*   
   useEffect(() => {
     client.getEntries()
     //if the server replies
@@ -36,6 +37,36 @@ function useAnimals() {
       .catch((error) => console.log("Request failed: " + error));
     //.catch -> in order to control error -> browser will display "Request failed" if promise is not fulfilled, but rejected
   }, []);
+ */
+  useEffect( () => {
+     fetch("http://localhost:5000/posts", )
+      .then( res => res.json())
+      .then( json => {
+        console.log(json)
+        // setFetched(json);
+        // setIsLoading(false);
+
+      })
+      .catch( () => console.log("request failed ")) 
+
+/*       const putmethod = {
+        method: 'POST', // Method itself
+        headers: {
+         'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
+        },
+        body: JSON.stringify({ "id": 2, "title": "json-server", "author": "typicode" }) // We send data in JSON format
+       }
+       
+       // make the HTTP put request using fetch api
+       fetch("http://localhost:5000/posts", putmethod)
+       .then(response => response.json())
+       .then(data => console.log(data)) // Manipulate the data retrieved back, if we want to do something with it
+       .catch(err => console.log(err)) // Do something with the error */
+     
+  }, [])
+
+
+
 
   return animals;
 }
