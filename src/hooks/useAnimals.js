@@ -35,19 +35,7 @@ function useAnimals() {
        .catch(() => console.log("Request failed"));
 
 
-    /* client
-      .getEntries()
-      //if the server replies
-      //response is a variable, depends on map function
-      .then((response) => {
-        console.log(response);
-        const newAnimals = response.items.map((item) => getAnimal(item));
-        //console.log(JSON.stringify(newAnimals));
-        setAnimals(newAnimals); //-> actions after answer, asynchronous callback
-      })
-      .catch((error) => console.log("Request failed: " + error)); */
-    //.catch -> in order to control error -> browser will display "Request failed" if promise is not fulfilled, but rejected
-
+   
     // const payload = {
     //   id: "ölkjölkjölkjölkj",
     //   name: "Kakerlake3 Tantaluka3",
@@ -70,8 +58,6 @@ function useAnimals() {
     //   .catch(() => console.log("Request failed"));
   }, []);
 
-
-   
   return animals;
 }
 
