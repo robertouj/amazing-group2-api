@@ -26,7 +26,6 @@ function useSelectedAnimal() {
 
     const fetchAnimal = (id) => {
       setIsloading(true);
-      //console.log(`http://localhost:5000/animals/${id}`)
       fetch(`http://localhost:9000/animals/${id}`)
         .then((res) => res.json())
         .then((json) => {
