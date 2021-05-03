@@ -27,9 +27,10 @@ function useAnimals() {
   //fetch can have a lot of data, we need client.getEntries otherwise website won´t be shown
   //with client.getEntries we can have loading state
   useEffect(() => { 
-   fetch(`http://localhost:5000/animals`)
+   fetch(`http://localhost:9000/animals`)
        .then((res) => res.json())
        .then(json => {
+        //  console.log(json)
           setAnimals(json);
        })
        .catch(() => console.log("Request failed"));
