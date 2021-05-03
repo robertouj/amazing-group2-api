@@ -17,6 +17,7 @@ function AnimalsList() {
   const getSelectedAnimal = (e) => {
     const { id, contentType } = e.target.dataset; //convention in React? To clarify with Patrick
     fetchAnimal(id);
+    console.log(selectedAnimal);
     setOptionToShow(contentType);
     toggle();
   };
