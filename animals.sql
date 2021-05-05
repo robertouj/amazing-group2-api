@@ -1,12 +1,12 @@
 DROP TABLE IF EXISTS animals;
-CREATE TABLE "animals" (
-    "id" VARCHAR(255) PRIMARY KEY,
-    "name" VARCHAR(255),
-    "latinName" VARCHAR(255),
-    "idVideo" VARCHAR(255),
-    "img" VARCHAR(255)
+CREATE TABLE animals (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR(255),
+    latinName VARCHAR(255),
+    idVideo VARCHAR(255),
+    img VARCHAR(255)
 );
-INSERT INTO "animals" VALUES
+INSERT INTO animals VALUES
     ('1UlRpfWybzyjuKseS85arg','Sassy Squirrels','Tamiasciurus hudsonicus','1XsUjY5Z8fk','//images.ctfassets.net/utnfcxl3mjrn/50p1o2nZkNiQZYZGs1308H/48e8b02fa2c1f0391ac3c6f343a2c28c/276650b7-nutty-shopper-t-501069.jpg?w=400&h=300&fit=fill'),
     ('AUwWYbgfHlLst2DAWJsSV','Courages Chimpanzees','Pan troglodytes','OsoNKlyFtpI','//images.ctfassets.net/utnfcxl3mjrn/ao0RZ0qsh0tIpJOtwiexA/32649a1762d36166b636599656aaa37b/2q82IrV6a2mB9TZmmepYii.jpg?w=400&h=300&fit=fill'),
     ('3oim0otIL8i81QCEMAUnQG','Goofy Guinea pigs','Cavia porcellus','o0vhplsjmow','//images.ctfassets.net/utnfcxl3mjrn/5EQ8FE3kYsk82Zgnd0gsN5/e32c84a8ad68c8335f336f3f7dcd1350/shutterstock_173581781.jpg?w=400&h=300&fit=fill'),

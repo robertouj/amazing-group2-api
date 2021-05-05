@@ -1,8 +1,8 @@
-DROP TABLE IF EXIST thumbnails;
-CREATE TABLE "thumbnails" (
-    "id" SERIAL PRIMARY KEY,
-    "url" VARCHAR(255),
-    "animal_id" VARCHAR(255)
+DROP TABLE IF EXISTS thumbnails;
+CREATE TABLE thumbnails (
+    id SERIAL PRIMARY KEY,
+    url VARCHAR(255),
+    animal_id VARCHAR(255)
 );
 INSERT INTO thumbnails(url,animal_id) VALUES ('//images.ctfassets.net/utnfcxl3mjrn/4uAYVKCaiVuHyWxdR3YGfg/9060f9ba158d2bf1c5069d2f7ae35ffe/Squirrel-Square.jpg','1UlRpfWybzyjuKseS85arg');
 INSERT INTO thumbnails(url,animal_id) VALUES ('//images.ctfassets.net/utnfcxl3mjrn/Y976tI3nLB55vbZRLcCIA/f8b1b8b0572f22124817831c6ba2ac16/60586-squirrel.jpg','1UlRpfWybzyjuKseS85arg');
