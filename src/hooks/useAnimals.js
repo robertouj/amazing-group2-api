@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 //import { client } from "../client";
+import { myGlobals } from '../globals';
 
 //getting information from contentful
 //we use get Animal to retrieve a new simplified object and save it  line 7-17: object
@@ -27,7 +28,7 @@ function useAnimals() {
   //fetch can have a lot of data, we need client.getEntries otherwise website won´t be shown
   //with client.getEntries we can have loading state
   useEffect(() => { 
-   fetch(`http://localhost:9000/animals`)
+   fetch(`${myGlobals.APP_ROOT}/animals`)
        .then((res) => res.json())
        .then(json => {
         //  console.log(json)

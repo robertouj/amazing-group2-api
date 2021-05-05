@@ -1,5 +1,6 @@
 import { useState } from "react";
 //import { client } from "../client";
+import { myGlobals } from '../globals';
 
 const getAnimal = (animal) => ({
   idVideo: animal.fields.video.fields.file.fileName
@@ -26,7 +27,7 @@ function useSelectedAnimal() {
 
     const fetchAnimal = (id) => {
       setIsloading(true);
-      fetch(`http://localhost:9000/animals/${id}`)
+      fetch(`${myGlobals.APP_ROOT}/animals/${id}`)
         .then((res) => res.json())
         .then((json) => {
           console.log(json)
