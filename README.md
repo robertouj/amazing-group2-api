@@ -6,7 +6,6 @@
 
 
 
-
 ### Recent Activity
 
 <!--START_SECTION:activity-->
@@ -25,3 +24,9 @@
 # CURL commands
 
 curl -d '{"id": "XXXXXxxxXXXXxXXXXXxx", "name": "Kakerlake Tantaluka", "latinName": "Kakerlis Tantalus"}' -H "Content-Type: application/json" -X POST http://localhost:5000/animals
+
+# To Run the Deployment 
+
+`js
+constant npm run deply
+`
