@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { client } from "../client";
+//import { client } from "../client";
 
 //getting information from contentful
 //we use get Animal to retrieve a new simplified object and save it  line 7-17: object
