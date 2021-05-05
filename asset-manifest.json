@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/amazing-group2-api/static/css/main.c35a1e8d.chunk.css",
-    "main.js": "/amazing-group2-api/static/js/main.efe2d3cc.chunk.js",
-    "main.js.map": "/amazing-group2-api/static/js/main.efe2d3cc.chunk.js.map",
+    "main.js": "/amazing-group2-api/static/js/main.a1d1ec22.chunk.js",
+    "main.js.map": "/amazing-group2-api/static/js/main.a1d1ec22.chunk.js.map",
     "runtime-main.js": "/amazing-group2-api/static/js/runtime-main.6031a1b5.js",
     "runtime-main.js.map": "/amazing-group2-api/static/js/runtime-main.6031a1b5.js.map",
     "static/css/2.ef9168ec.chunk.css": "/amazing-group2-api/static/css/2.ef9168ec.chunk.css",
-    "static/js/2.8e9f47bb.chunk.js": "/amazing-group2-api/static/js/2.8e9f47bb.chunk.js",
-    "static/js/2.8e9f47bb.chunk.js.map": "/amazing-group2-api/static/js/2.8e9f47bb.chunk.js.map",
+    "static/js/2.2a8d7771.chunk.js": "/amazing-group2-api/static/js/2.2a8d7771.chunk.js",
+    "static/js/2.2a8d7771.chunk.js.map": "/amazing-group2-api/static/js/2.2a8d7771.chunk.js.map",
     "index.html": "/amazing-group2-api/index.html",
     "static/css/2.ef9168ec.chunk.css.map": "/amazing-group2-api/static/css/2.ef9168ec.chunk.css.map",
     "static/css/main.c35a1e8d.chunk.css.map": "/amazing-group2-api/static/css/main.c35a1e8d.chunk.css.map",
-    "static/js/2.8e9f47bb.chunk.js.LICENSE.txt": "/amazing-group2-api/static/js/2.8e9f47bb.chunk.js.LICENSE.txt"
+    "static/js/2.2a8d7771.chunk.js.LICENSE.txt": "/amazing-group2-api/static/js/2.2a8d7771.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6031a1b5.js",
     "static/css/2.ef9168ec.chunk.css",
-    "static/js/2.8e9f47bb.chunk.js",
+    "static/js/2.2a8d7771.chunk.js",
     "static/css/main.c35a1e8d.chunk.css",
-    "static/js/main.efe2d3cc.chunk.js"
+    "static/js/main.a1d1ec22.chunk.js"
   ]
 }
