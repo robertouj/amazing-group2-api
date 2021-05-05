@@ -27,6 +27,9 @@ function useAnimals() {
   //useEffect = actions are exectued after the DOM is loaded (at the end)
   //fetch can have a lot of data, we need client.getEntries otherwise website won´t be shown
   //with client.getEntries we can have loading state
+  
+  console.log("env variable: ",process.env.NODE_ENV);
+  
   useEffect(() => { 
    fetch(`${APP_ROOT}/animals`)
        .then((res) => res.json())
