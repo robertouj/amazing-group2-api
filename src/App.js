@@ -21,7 +21,7 @@ function App() {
   const data = {
     name: name,
     latinName: latinName,
-    thumbnails: [thumbnails],
+    thumbnails: thumbnails,
     idVideo: idVideo,
     img: img,
   };
