@@ -5,6 +5,12 @@ import {
   ButtonGroup,
 } from "reactstrap";
 
+import { IoMdImages } from "react-icons/io"
+import { BsCameraVideoFill } from "react-icons/bs"
+import { BiEdit } from "react-icons/bi"
+import { AiFillDelete } from "react-icons/ai"
+
+
 function Animal({animal, getSelectedAnimal}, key) {
 
   return (
@@ -20,7 +26,7 @@ function Animal({animal, getSelectedAnimal}, key) {
         </div>
         <ButtonGroup>
           <Button
-          className="bg-third text-fourth"
+            className="bg-third text-fourth"
             data-id={animal.id}
             data-content-type="carousel"
             onClick={getSelectedAnimal}
@@ -33,7 +39,7 @@ function Animal({animal, getSelectedAnimal}, key) {
             data-content-type="video"
             onClick={getSelectedAnimal}
           >
-            Video
+            Videos
           </Button>
         </ButtonGroup>
       </CardBody>

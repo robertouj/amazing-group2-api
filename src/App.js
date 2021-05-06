@@ -27,14 +27,8 @@ function App() {
   };
 
   const messages = {
-    created: 
-      <Alert color="success">
-        The pretty Animal was created!!
-      </Alert>,
-    errorMessage: 
-      <Alert color="danger">
-        Something was wrong!!
-      </Alert>,
+    created: <Alert color="success">The pretty Animal was created!!</Alert>,
+    errorMessage: <Alert color="danger">Something was wrong!!</Alert>,
   };
 
   const sendToServer = () => {
@@ -52,15 +46,14 @@ function App() {
     fetch(`${myGlobals.APP_ROOT}/animals`, optionsPOST)
       .then((response) => {
         console.log(response);
-        
         setMessageToShow("created");
         setAreMessages(true);
       })
       .catch(() => {
         setMessageToShow("errorMessage");
-        console.log("Request failed")
+        console.log("Request failed");
       });
-  };  
+  };
 
   return (
     <div className="App bg-secondary">
@@ -68,16 +61,16 @@ function App() {
         <img src={logo} alt="Absolut amazing animals" />
       </header>
       <main className="mb-0">
-        <NavLink to="/formular">Create Animal</NavLink>
-
+        <div className="p-3">
+          <NavLink to="/formular" className="text-fourth">
+            Create Animal
+          </NavLink>
+        </div>
         <Switch>
           <Route path="/formular/">
-            <Container>
-
-              <div>
-                {areMessages && messages[messageToShow]}
-              </div>
-              <InputGroup>
+            <Container className="p-3 mb-3 bg-primary rounded-lg">
+              <div>{areMessages && messages[messageToShow]}</div>
+              <InputGroup className="p-3 mb-3">
                 <Input
                   onChange={(i) => setName(i.target.value)}
                   className="name"
@@ -104,7 +97,7 @@ function App() {
                   placeholder="img"
                 />
               </InputGroup>
-              <Button onClick={sendToServer} color="primary">
+              <Button className="bg-third text-fourth" onClick={sendToServer}>
                 Save
               </Button>
             </Container>

@@ -15,18 +15,13 @@ const getAnimal = (animal) => ({
   img: animal.fields.image?.fields.file.url + "?w=400&h=300&fit=pad",
 });
 
-//we created this custom hook in order to retrieve the data from single animals to use for thumbnails and video
-//if we click on thumbnail/carousel we want to display various images, we want to load pictures on request and do not want to load all of them once we load the page
-//we create various useState with selectedAnimal
 function useSelectedAnimal() {
-  const [selectedAnimal, setSelectedAnimal] = useState([]); //empty array to start
-  const [isLoading, setIsloading] = useState(false); //at the beginning: false
-
-  //fetch resources asynchronously, we need a method to call this hook
-  //fetchAnimal is like a method in a class
+  const [selectedAnimal, setSelectedAnimal] = useState([]); 
+  const [isLoading, setIsloading] = useState(false);
 
     const fetchAnimal = (id) => {
       setIsloading(true);
+      console.log("this is the id: ",id);
       fetch(`${myGlobals.APP_ROOT}/animals/${id}`)
         .then((res) => res.json())
         .then((json) => {
@@ -39,7 +34,5 @@ function useSelectedAnimal() {
 
   return [selectedAnimal, fetchAnimal, isLoading];
 }
-
-// json-server --watch db.json
 
 export default useSelectedAnimal;
