@@ -67,7 +67,7 @@ function App() {
           </NavLink>
         </div>
         <Switch>
-          <Route path="/formular/">
+          <Route path="./formular/">
             <Container className="p-3 mb-3 bg-primary rounded-lg">
               <div>{areMessages && messages[messageToShow]}</div>
               <InputGroup className="p-3 mb-3">
