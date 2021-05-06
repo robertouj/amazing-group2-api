@@ -62,7 +62,7 @@ function App() {
       </header>
       <main className="mb-0">
         <div className="p-3">
-          <NavLink to="/formular" className="text-fourth">
+          <NavLink to="./formular" className="text-fourth">
             Create Animal
           </NavLink>
         </div>

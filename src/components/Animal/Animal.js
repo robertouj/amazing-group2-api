@@ -1,23 +1,20 @@
 import React from "react";
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle } from "reactstrap";
-import {
-  Button,
-  ButtonGroup,
-} from "reactstrap";
+import { Button, ButtonGroup } from "reactstrap";
 
-import { IoMdImages } from "react-icons/io"
-import { BsCameraVideoFill } from "react-icons/bs"
-import { BiEdit } from "react-icons/bi"
-import { AiFillDelete } from "react-icons/ai"
+import { IoMdImages } from "react-icons/io";
+import { BsCameraVideoFill } from "react-icons/bs";
+import { BiEdit } from "react-icons/bi";
+import { AiFillDelete } from "react-icons/ai";
 
-
-function Animal({animal, getSelectedAnimal}, key) {
-
+function Animal({ animal, getSelectedAnimal }, key) {
   return (
     <Card key={key} className="Animal shadow p-3 mb-5 bg-primary rounded-lg">
       <CardBody>
         <div className="card-content-top">
-          <CardTitle tag="h3" className="text-third">{animal.name}</CardTitle>
+          <CardTitle tag="h3" className="text-third">
+            {animal.name}
+          </CardTitle>
           <CardImg bottom width="100%" src={animal.img} alt={animal.title} />
           {/* style={{fontSize: "24px"}} */}
           <CardSubtitle tag="h6" className="mb-2 pt-3">
@@ -31,15 +28,15 @@ function Animal({animal, getSelectedAnimal}, key) {
             data-content-type="carousel"
             onClick={getSelectedAnimal}
           >
-            Images
+           Image
           </Button>
           <Button
-          className="bg-third text-fourth"
+            className="bg-third text-fourth"
             data-id={animal.id}
             data-content-type="video"
             onClick={getSelectedAnimal}
-          >
-            Videos
+          > 
+           Video
           </Button>
         </ButtonGroup>
       </CardBody>
