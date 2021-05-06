@@ -62,12 +62,7 @@ function App() {
       </header>
       <main className="mb-0">
         <div className="p-3">
-          <NavLink to="./formular" className="text-fourth">
-            Create Animal
-          </NavLink>
         </div>
-        <Switch>
-          <Route path="./formular/">
             <Container className="p-3 mb-3 bg-primary rounded-lg">
               <div>{areMessages && messages[messageToShow]}</div>
               <InputGroup className="p-3 mb-3">
@@ -101,9 +96,6 @@ function App() {
                 Save
               </Button>
             </Container>
-          </Route>
-        </Switch>
-
         <Container>
           <AnimalsList />
         </Container>
